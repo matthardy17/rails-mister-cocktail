@@ -1,17 +1,18 @@
 <h1><%= @cocktail.name %></h1>
 
-<%# @doses.each do dose
-dose.description, dose.ingrdient 
-end %>
-
 <ul>
   <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.description + " - " + dose.ingredient.name %></li>
+    <li><%= dose.description + " - " + dose.ingredient.name %> <%= link_to '🗑',
+      dose_path(dose),
+      method: :delete,
+      data: { confirm: "Are you sure?"} %></p>
+    </li>
   <% end %>
-  
 </ul>
 
-<%= simple_form_for [@cocktail, @doses] do |f| %>
+<%= link_to "Back to cocktails", cocktails_path, class: "btn btn-primary"  %>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient %>
   <%= f.button :submit, class: "btn btn-primary" %>
