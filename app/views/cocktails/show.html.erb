@@ -10,10 +10,10 @@
   <% end %>
 </ul>
 
-<%= link_to "Back to cocktails", cocktails_path, class: "btn btn-primary"  %>
-
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn btn-primary mb-4" %>
 <% end %>
+
+<%= link_to "Back to cocktails", cocktails_path, class: "btn btn-primary"  %>
