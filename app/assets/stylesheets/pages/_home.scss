@@ -15,7 +15,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.container {
+.cards-container {
   display: flex;
   justify-content: space-around;
 }
@@ -45,4 +45,13 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+body {
+  background-color: #232528;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
