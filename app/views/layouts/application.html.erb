@@ -8,11 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Damion&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
   </head>
 
   <body>
-
-  <div class="container"><%= image_tag("logo.png", :alt => "rss feed") %></div>
     <%= yield %>
 
     <div class="footer">
@@ -22,9 +21,6 @@
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
   </div>
 </div>
 
