@@ -8,28 +8,29 @@
   <div class="cocktail-show">
     <% if @cocktail.photo.attached? %>
     <%= cl_image_tag(@cocktail.photo.key,
-          width: 300, height: 300, crop: :fill) %>
+           width: 300, height: 300, crop: :fill) %>
     <% end %>
-    <div class="cocktail-details">
-      <h1><%= @cocktail.name %></h1>
-      <ul>
-        <% @cocktail.doses.each do |dose| %>
-          <li><%= dose.description + " - " + dose.ingredient.name %> | <%= link_to 'Remove',
-            dose_path(dose),
-            method: :delete,
-            data: { confirm: "Are you sure?"} %>
-          </li>
+    <div class="cocktail-info">
+      <div class="cocktail-details">
+        <h1><%= @cocktail.name %></h1>
+        <ul>
+          <% @cocktail.doses.each do |dose| %>
+            <li><%= dose.description + " - " + dose.ingredient.name %> | <%= link_to 'Remove',
+              dose_path(dose),
+              method: :delete,
+              data: { confirm: "Are you sure?"} %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="form-inputs">
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.input :description, label:"Quantity" %>
+          <%= f.association :ingredient %>
+          <%= f.button :submit, class: "btn reverse-button mb-4" %>
         <% end %>
-      </ul>
+      </div>
     </div>
   </div>
-
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <div class="form-inputs" style="width: 400px">
-      <%= f.input :description, label:"Quantity" %>
-      <%= f.association :ingredient %>
-      <%= f.button :submit, class: "btn reverse-button mb-4" %>
-    <% end %>
-  </div>
-  <%= link_to "Back to cocktails", cocktails_path, class: "btn main-button"  %>
+  <%= link_to "Back to cocktails", cocktails_path, class: "btn main-button mt-3"  %>
 </div>

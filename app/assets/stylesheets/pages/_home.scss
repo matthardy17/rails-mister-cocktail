@@ -82,11 +82,13 @@ body {
 
 .cocktail-details {
   color: $gray;
-  padding: 8px;
+  padding: 16px;
 }
 
 .cocktail-show {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
   color: $gray;
   border: 2px solid $lightgreen;
 }
@@ -100,4 +102,11 @@ body {
 .cocktail-details a:hover {
   text-decoration: none;
   color: $gold;
+}
+
+.cocktail-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-grow: 1;
 }
