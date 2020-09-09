@@ -80,6 +80,16 @@ body {
 
 //cocktail show page
 
+.picture {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 400px;
+  @media only screen and (max-width: 760px) {
+    width: 100%;
+  }
+}
+
 .cocktail-details {
   color: $gray;
   padding: 16px;
