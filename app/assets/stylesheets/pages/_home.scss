@@ -3,10 +3,11 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
-  width: 180px;
+  height: 240px;
+  width: 240px;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
   color: white;
   font-size: 24px;
@@ -14,25 +15,48 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 8px 8px;
+  opacity: 0.8;
   transition: 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
+    opacity: 1;
   }
+}
+
+.card-category p {
+  margin: 0;
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  font-family: 'Bad Script', cursive;
 }
 
 .cards-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 0;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.cards-container a {
+  text-decoration: none;
 }
 
 .footer {
   background: $darkgreen;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100px;
+  justify-content: flex-end;
+  height: 75px;
   padding: 0px 50px;
   color: $gold;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-links a {
@@ -40,9 +64,10 @@
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  transition: 0.25s;
 }
 .footer-links a:hover {
-  transform: scale(1.20);
+  color: $lightgreen;
 }
 
 body {
@@ -51,4 +76,28 @@ body {
 
 .container {
   justify-items: center;
+}
+
+//cocktail show page
+
+.cocktail-details {
+  color: $gray;
+  padding: 8px;
+}
+
+.cocktail-show {
+  display: flex;
+  color: $gray;
+  border: 2px solid $lightgreen;
+}
+
+.cocktail-details a {
+  text-decoration: none;
+  color: $lightgreen;
+  transition: .5s;
+}
+
+.cocktail-details a:hover {
+  text-decoration: none;
+  color: $gold;
 }

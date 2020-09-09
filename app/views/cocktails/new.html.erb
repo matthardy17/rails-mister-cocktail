@@ -1,9 +1,19 @@
-<h1>Add a new cocktail</h1>
+<div class="banner-show">
+  <div class="container">
+    <h1>Hardys Hard Stuff</h1>
+  </div>
+</div>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <h1>Add a new cocktail</h1>
 
-<%= link_to "Back to cocktails", cocktails_path, class: "btn btn-primary"  %>
+  <%= simple_form_for @cocktail do |f| %>
+    <div class="form-inputs" style="width: 480px">
+      <%= f.input :name, label:"Cocktail name" %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, class: "btn reverse-button" %>
+    </div>
+  <% end %>
+
+  <%= link_to "Back to cocktails", cocktails_path, class: "btn main-button"  %>
+</div>

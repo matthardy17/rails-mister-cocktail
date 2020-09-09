@@ -1,0 +1,29 @@
+.main-button {
+  background: $darkgreen;
+  color: $gray;
+  opacity: 0.7;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+.main-button:hover {
+  opacity: 1;
+  color: $gold;
+  background-color: $darkgreen;
+  border: 1px solid $gold;
+}
+
+.reverse-button {
+  background: $lightgreen;
+  color: $gray;
+  opacity: 1;
+  transition: .5s;
+  border-radius: 5px;
+}
+
+.reverse-button:hover {
+  opacity: 1;
+  color: $gold;
+  background-color: $lightgreen;
+  border: 1px solid $gold;
+}

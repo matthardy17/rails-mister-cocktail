@@ -1,8 +1,8 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)), url(/assets/banner.jpg);">
+<div class="banner">
   <div class="container">
     <h1>Hardys Hard Stuff</h1>
     <p>Classic cocktails that will delight all</p>
-    <%= link_to 'Add a new cocktail', 'cocktails/new', class: "btn btn-success" %>
+    <%= link_to 'Add a new cocktail', 'cocktails/new', class: "btn reverse-button" %>
   </div>
 </div>
 
@@ -11,15 +11,7 @@
 <div class="cards-container">
   <% @cocktails.each do |cocktail| %>
   <%= link_to cocktail_path(cocktail) do  %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')"> <%= cocktail.name %> </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')"> <p><%= cocktail.name %> </p></div>
     <% end %>
   <% end %>
 </div>
-
-<%#= simple_form_for @cocktail do |f| %>
-  <%#= f.input :name %>
-  <%#= f.input :photo, as: :file %>
-  <%# <%= f.button :submit, class: "btn btn-primary" %> %>
-<%# <% end %> %>
-
-
